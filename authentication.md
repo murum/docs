@@ -464,10 +464,18 @@ Also, add the `Socialite` facade to the `aliases` array in your `app` configurat
 
 You will also need to add credentials for the OAuth services your application utilizes. These credentials should be placed in your `config/services.php` configuration file, and should use the key `facebook`, `twitter`, `google`, or `github`, depending on the providers your application requires. For example:
 
+    // Github
     'github' => [
         'client_id' => 'your-github-app-id',
         'client_secret' => 'your-github-app-secret',
-        'redirect' => 'http://your-callback-url',
+        'redirect' => 'http://your-callback-url', // The callback URL where the user should be redirected to on your application
+    ],
+    
+    // Twitter
+    'twitter' => [
+        'client_id' => 'your-twitter-app-id',
+        'client_secret' => 'your-twitter-app-secret',
+        'redirect' => 'http://your-url-callback', // The callback URL where the user should be redirected to on your application
     ],
 
 ### Basic Usage
